@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
 import {
@@ -24,7 +25,7 @@ import {
   DropdownMenuSubContent,
 } from "@/components/ui/dropdown-menu";
 
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 
 /* ───── nav data ───── */
 const projectsSubItems = [
@@ -54,7 +55,7 @@ function DesktopNav() {
                       <NavigationMenuLink asChild>
                         <Link
                           href={child.href}
-                          className="block rounded-md px-3 py-2 text-sm"
+                          className="block rounded-md px-3 py-2 text-lg"
                         >
                           {child.label}
                         </Link>
@@ -119,15 +120,30 @@ function MobileNav() {
   );
 }
 
+/* ───── logo map (pathname prefix → logo) ───── */
+const logoMap: Record<string, string> = {
+  "/projects/kaleido-colorlab": "/logo-colorlab.png",
+};
+
+function useLogo() {
+  const pathname = usePathname();
+  for (const [prefix, src] of Object.entries(logoMap)) {
+    if (pathname.startsWith(prefix)) return src;
+  }
+  return "/logo-default.png";
+}
+
 /* ───── Nav (exported) ───── */
 export default function Nav() {
+  const logoSrc = useLogo();
+
   return (
     <header className="sticky top-0 z-50 w-full  bg-background backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-9xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/logo-default.png"
+            src={logoSrc}
             alt="Logo"
             width={120}
             height={40}
