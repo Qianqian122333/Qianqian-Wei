@@ -49,7 +49,7 @@ function DesktopNav() {
             <NavigationMenuItem key={item.label}>
               <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[160px] gap-1 p-2">
+                <ul className="grid w-40 gap-1 p-2">
                   {item.children.map((child) => (
                     <li key={child.label}>
                       <NavigationMenuLink asChild>
@@ -138,7 +138,7 @@ export default function Nav() {
   const logoSrc = useLogo();
 
   return (
-    <header className="sticky top-0 z-50 w-full  bg-background backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full bg-background backdrop-blur-sm border-b border-foreground">
       <div className="mx-auto flex h-16 max-w-9xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="shrink-0">

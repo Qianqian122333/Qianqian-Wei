@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface PrimaryButtonProps {
   children: React.ReactNode;
@@ -17,9 +20,10 @@ export default function PrimaryButton({
   target,
   rel,
 }: PrimaryButtonProps) {
-  const base =
-    "inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-[#1A1A1A] font-semibold transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50";
+  const pathname = usePathname();
+  const textColor = pathname === "/" ? "text-foreground" : "text-[#1A1A1A]";
 
+  const base = `inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 ${textColor} font-semibold transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50`;
   if (href) {
     return (
       <Link
