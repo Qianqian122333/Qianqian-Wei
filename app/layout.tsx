@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Kalam } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${kalam.variable} antialiased`}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

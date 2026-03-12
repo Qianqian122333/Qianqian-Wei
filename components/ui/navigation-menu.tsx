@@ -59,7 +59,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors outline-none hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary focus-visible:ring-0 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-transparent data-[state=open]:text-primary data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent",
+  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm md:text-base font-medium transition-colors outline-none hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary focus-visible:ring-0 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-transparent data-[state=open]:text-primary data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent",
 );
 
 function NavigationMenuTrigger({
@@ -129,7 +129,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "flex flex-col gap-1 rounded-sm p-2 text-sm transition-colors outline-none hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary focus-visible:ring-0 focus-visible:outline-none data-[active=true]:bg-transparent data-[active=true]:text-primary data-[active=true]:hover:bg-transparent data-[active=true]:focus:bg-transparent [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground",
+        "flex flex-col gap-1 rounded-sm p-2 text-sm md:text-base transition-colors outline-none hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary focus-visible:ring-0 focus-visible:outline-none data-[active=true]:bg-transparent data-[active=true]:text-primary data-[active=true]:hover:bg-transparent data-[active=true]:focus:bg-transparent [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground",
         className,
       )}
       {...props}
