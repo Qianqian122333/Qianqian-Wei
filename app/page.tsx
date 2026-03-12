@@ -395,7 +395,7 @@ export default function Home() {
             </div>
             <div className="w-full md:w-2/5 space-y-6">
               <h3 className="font-kalam text-3xl font-bold text-primary">
-                Keep Learning, Keep Crossing ✨
+                Keep Learning, Keep Crossing 
               </h3>
               <p className="text-base text-foreground/80 leading-relaxed">
                 Across four years of undergraduate study, I pursued two
@@ -573,9 +573,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card 1 — Hanfu Model */}
-            <div className="group rounded-2xl border border-border bg-background p-6 transition-shadow hover:shadow-lg">
-              <div className="w-full aspect-4/3 rounded-xl bg-foreground/5 border border-dashed border-foreground/20 flex items-center justify-center mb-6 overflow-hidden">
-                <span className="text-5xl">👘</span>
+            <div className="group rounded-2xl border border-border bg-background p-6">
+              <div className="w-full aspect-4/3 rounded-xl mb-6 overflow-hidden">
+                <Image
+                  src="/hanfu.jpg"
+                  alt="Hanfu Model"
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-kalam text-xl font-bold text-primary mb-2">
                 Part-Time Hanfu Model 💃
@@ -586,9 +592,15 @@ export default function Home() {
             </div>
 
             {/* Card 2 — Early Bird */}
-            <div className="group rounded-2xl border border-border bg-background p-6 transition-shadow hover:shadow-lg">
-              <div className="w-full aspect-4/3 rounded-xl bg-foreground/5 border border-dashed border-foreground/20 flex items-center justify-center mb-6 overflow-hidden">
-                <span className="text-5xl">🌅</span>
+            <div className="group rounded-2xl border border-border bg-background p-6">
+              <div className="w-full aspect-4/3 rounded-xl mb-6 overflow-hidden">
+                <Image
+                  src="/morning.jpg"
+                  alt="Early Bird"
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-kalam text-xl font-bold text-primary mb-2">
                 Early Bird & Morning Workout 🏋️
@@ -599,9 +611,15 @@ export default function Home() {
             </div>
 
             {/* Card 3 — Animals & Duolingo */}
-            <div className="group rounded-2xl border border-border bg-background p-6 transition-shadow hover:shadow-lg">
-              <div className="w-full aspect-4/3 rounded-xl bg-foreground/5 border border-dashed border-foreground/20 flex items-center justify-center mb-6 overflow-hidden">
-                <span className="text-5xl">🐾</span>
+            <div className="group rounded-2xl border border-border bg-background p-6">
+              <div className="w-full aspect-4/3 rounded-xl mb-6 overflow-hidden">
+                <Image
+                  src="/animal.jpg"
+                  alt="Animal Lover"
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-kalam text-xl font-bold text-primary mb-2">
                 Animal Lover & Duolingo Owl 🦉
@@ -612,9 +630,15 @@ export default function Home() {
             </div>
 
             {/* Card 4 — INFJ Nature Lover */}
-            <div className="group rounded-2xl border border-border bg-background p-6 transition-shadow hover:shadow-lg">
-              <div className="w-full aspect-4/3 rounded-xl bg-foreground/5 border border-dashed border-foreground/20 flex items-center justify-center mb-6 overflow-hidden">
-                <span className="text-5xl">🌿</span>
+            <div className="group rounded-2xl border border-border bg-background p-6">
+              <div className="w-full aspect-4/3 rounded-xl mb-6 overflow-hidden">
+                <Image
+                  src="/nature.jpg"
+                  alt="Nature"
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-kalam text-xl font-bold text-primary mb-2">
                 INFJ × Nature Healer 🌳
