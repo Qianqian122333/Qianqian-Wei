@@ -30,7 +30,7 @@ import {
 /* ───── nav data ───── */
 const projectsSubItems = [
   { label: "Kaleido ColorLab", href: "/projects/kaleido-colorlab" },
-  { label: "Gaahliri Shop", href: "/projects/gaahliri-shop" },
+  { label: "Aventus Airbrush", href: "/projects/aventus-airbrush" },
 ];
 
 const navItems = [

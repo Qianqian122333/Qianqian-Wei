@@ -232,7 +232,7 @@ export default function Home() {
           {/* Project 2 */}
           <div className="flex flex-col items-center gap-6 text-center pt-8 border-t border-foreground/10">
             <Link
-              href="#"
+              href="/projects/aventus-airbrush"
               className="w-full max-w-4xl mb-8 overflow-hidden rounded-xl"
             >
               <Image
@@ -261,7 +261,9 @@ export default function Home() {
               Gaahleri is a premium brand specializing in high-performance
               airbrushes and professional painting accessories.
             </p>
-            <PrimaryButton href="#">Read More</PrimaryButton>
+            <PrimaryButton href="/projects/aventus-airbrush">
+              Read More
+            </PrimaryButton>
           </div>
         </div>
       </section>

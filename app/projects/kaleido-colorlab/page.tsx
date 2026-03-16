@@ -31,7 +31,7 @@ const Page = () => {
 
         <div className="relative w-full mb-16">
           <Image
-            src="/colorlab-hero.png"
+            src="/colorlab-heropic.png"
             alt="Kaleido ColorLab Hero"
             width={1920}
             height={1080}
@@ -591,7 +591,7 @@ const Page = () => {
             Explore Kaleido ColorLab
           </PrimaryButton>
           <PrimaryButton
-            href="/projects/gaahliri-shop"
+            href="/projects/aventus-airbrush"
             className="w-full border border-primary/20 bg-transparent text-primary hover:bg-primary/10 hover:border-primary/50 sm:w-auto"
           >
             Next Project
