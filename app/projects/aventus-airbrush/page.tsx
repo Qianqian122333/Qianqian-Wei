@@ -133,11 +133,15 @@ const Page = () => {
                   for Scanability
                 </h3>
                 <p className="text-foreground/80">
-                  Marketing wanted 11+ selling points crammed onto one page, causing cognitive overload.
+                  Marketing wanted 11+ selling points crammed onto one page,
+                  causing cognitive overload.
                   <br />
-                  I restructured the information architecture by splitting content into two main page and several sub-pages after negotiating with stakeholders.
+                  I restructured the information architecture by splitting
+                  content into two main page and several sub-pages after
+                  negotiating with stakeholders.
                   <br />
-                  The result is a clean hierarchy that lets users scan faster and find what matters.
+                  The result is a clean hierarchy that lets users scan faster
+                  and find what matters.
                 </p>
               </div>
 
@@ -176,11 +180,15 @@ const Page = () => {
                   The Mandated Plugin Broke UX — I Redesigned the UI for Clarity
                 </h3>
                 <p className="text-foreground/80">
-                  The stakeholders mandated a Shopify plugin for customization, but its template conflicted with our store and offered poor UX.
+                  The stakeholders mandated a Shopify plugin for customization,
+                  but its template conflicted with our store and offered poor
+                  UX.
                   <br />
-                  I redesigned and rewrote the plugin&apos;s CSS so users can see both color swatches and names simultaneously.
+                  I redesigned and rewrote the plugin&apos;s CSS so users can
+                  see both color swatches and names simultaneously.
                   <br />
-                  This delivered a custom-like experience with zero extra development cost.
+                  This delivered a custom-like experience with zero extra
+                  development cost.
                 </p>
               </div>
 
@@ -215,9 +223,11 @@ const Page = () => {
                   Consistency Through Design
                 </h3>
                 <p className="text-foreground/80">
-                  The plugin&apos;s white canvas clashed with our brand&apos;s black theme, creating visual friction.
+                  The plugin&apos;s white canvas clashed with our brand&apos;s
+                  black theme, creating visual friction.
                   <br />
-                  I designed a black-white alternating layout that frames the white plugin as a feature, not a bug.
+                  I designed a black-white alternating layout that frames the
+                  white plugin as a feature, not a bug.
                   <br />
                   The purchase flow now feels seamless and brand-consistent.
                 </p>
