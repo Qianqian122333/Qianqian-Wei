@@ -36,7 +36,7 @@ const projectsSubItems = [
 const navItems = [
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects", children: projectsSubItems },
-  { label: "Service & Contact", href: "/service-contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 /* ───── Desktop / Tablet nav (md+) ───── */
@@ -123,6 +123,7 @@ function MobileNav() {
 /* ───── logo map (pathname prefix → logo) ───── */
 const logoMap: Record<string, string> = {
   "/projects/kaleido-colorlab": "/logo-colorlab.png",
+  "/projects/aventus-airbrush": "/Aventus-logo.png",
 };
 
 function useLogo() {

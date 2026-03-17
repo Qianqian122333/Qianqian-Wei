@@ -3,9 +3,6 @@
 import { useState, FormEvent } from "react";
 import Link from "next/link";
 import {
-  Palette,
-  Code2,
-  Clock,
   Send,
   Mail,
   Linkedin,
@@ -14,7 +11,7 @@ import {
   Loader2,
 } from "lucide-react";
 
-export default function ServiceContactPage() {
+export default function ContactPage() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -54,129 +51,11 @@ export default function ServiceContactPage() {
 
   return (
     <main className="w-full pb-24 bg-background">
-      {/* ───── Hero ───── */}
-      <section className="w-full py-24 bg-background">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h1 className="mb-6 font-kalam font-bold text-4xl text-primary md:text-6xl">
-            Service & Contact
-          </h1>
-          <p className="text-lg text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-            I design intuitive experiences and build them with clean, performant
-            code. Let&apos;s work together to bring your ideas to life!
-          </p>
-        </div>
-      </section>
-
-      {/* ───── Services ───── */}
-      <section className="w-full py-24 bg-background">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="mb-16 text-center font-kalam font-bold text-4xl text-primary md:text-5xl">
-            My Services
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* UX Design */}
-            <div className="rounded-2xl border border-border bg-background-alt p-8 transition-shadow hover:shadow-lg">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
-                  <Palette className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-kalam text-2xl font-bold text-foreground">
-                  UX Design
-                </h3>
-              </div>
-              <ul className="space-y-3 text-sm text-foreground/80 leading-relaxed">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  User Research & Competitive Analysis
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  User Persona, Empathy Map & Journey Map
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  Information Architecture & User Flows
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  Wireframes & High-Fidelity Prototypes
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  Design System & Component Library
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  Usability Testing & Iteration
-                </li>
-              </ul>
-            </div>
-
-            {/* Full-Stack Development */}
-            <div className="rounded-2xl border border-border bg-background-alt p-8 transition-shadow hover:shadow-lg">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
-                  <Code2 className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-kalam text-2xl font-bold text-foreground">
-                  Full-Stack Dev
-                </h3>
-              </div>
-              <p className="text-xs text-primary font-semibold mb-4 uppercase tracking-wide">
-                Front-end focused
-              </p>
-              <ul className="space-y-3 text-sm text-foreground/80 leading-relaxed">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  React, Next.js & TypeScript
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  Tailwind CSS & Responsive Design
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  Pixel-Perfect UI Implementation
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  RESTful API & Database Integration
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  Performance Optimisation & SEO
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-0.5">✦</span>
-                  Deployment & CI/CD
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Free consultation banner */}
-          <div className="mt-12 rounded-2xl border-2 border-dashed border-primary/30 bg-primary/5 p-8 text-center">
-            <div className="flex items-center justify-center gap-3 mb-3">
-              <Clock className="w-6 h-6 text-primary" />
-              <h3 className="font-kalam text-2xl font-bold text-primary">
-                Free 30-Min Consultation 🎁
-              </h3>
-            </div>
-            <p className="text-foreground/80 max-w-xl mx-auto">
-              Every new client gets a complimentary 30-minute consultation.
-              Let&apos;s chat about your project, explore ideas, and see how I
-              can help — no strings attached!
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ───── Contact ───── */}
-      <section className="w-full py-24 bg-background">
+      <section className="w-full pt-32 pb-24 bg-background">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-16 text-center font-kalam font-bold text-4xl text-primary md:text-5xl">
-            Get In Touch
+            Contact me
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">

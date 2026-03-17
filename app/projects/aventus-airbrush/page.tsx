@@ -215,7 +215,11 @@ const Page = () => {
                 <div className="w-full space-y-6 md:w-1/2">
                   <p className="text-foreground/80">
                     I restructured the information architecture by splitting
-                    content into two main page and{" "}
+                    content into{" "}
+                    <span className="font-bold text-primary">
+                      two main page
+                    </span>{" "}
+                    and{" "}
                     <span className="font-bold text-primary">6 sub-pages</span>{" "}
                     after negotiating with stakeholders.
                   </p>
@@ -246,7 +250,10 @@ const Page = () => {
                     The stakeholders mandated a Shopify plugin for
                     customization, but its template conflicted with our store
                     and offered{" "}
-                    <span className="font-bold text-primary">poor UI</span>.
+                    <span className="font-bold text-primary">
+                      unclear UI without option name
+                    </span>
+                    .
                   </p>
                 </div>
                 <div className="flex flex-col items-center">
@@ -262,10 +269,14 @@ const Page = () => {
                   <p className="mt-4 text-sm text-primary w-full">
                     Shopify plugin&apos;s UI has two problem:
                     <br />
-                    1. Users can only see option images, not option names.
+                    <span className="font-bold">
+                      1. Users can only see option images, not option names.
+                    </span>
                     <br />
-                    2. The shopify plugin is incompatible with our store&apos;s
-                    theme template.
+                    <span className="font-bold">
+                      2. The shopify plugin is incompatible with our
+                      store&apos;s theme template.
+                    </span>
                   </p>
                 </div>
                 <div className="md:hidden">
@@ -273,7 +284,10 @@ const Page = () => {
                     The stakeholders mandated a Shopify plugin for
                     customization, but its template conflicted with our store
                     and offered{" "}
-                    <span className="font-bold text-primary">poor UI</span>.
+                    <span className="font-bold text-primary">
+                      unclear UI without option name
+                    </span>
+                    .
                   </p>
                 </div>
               </div>
@@ -284,7 +298,7 @@ const Page = () => {
                   <div className="flex flex-col items-center">
                     <div className="w-full overflow-hidden rounded-2xl">
                       <Image
-                        src="/aventus-css.png"
+                        src="/aventus-mycss.png"
                         alt="Aventus CSS Redesign"
                         width={800}
                         height={450}
@@ -332,8 +346,8 @@ const Page = () => {
                 <div className="w-full space-y-6 md:w-1/2">
                   <p className="text-foreground/80">
                     <span className="font-bold text-primary">
-                      The redesigned UI allows users to see both option images and
-                      names simultaneously.
+                      The redesigned UI allows users to see both option images
+                      and names simultaneously.
                     </span>
                   </p>
                 </div>
@@ -427,8 +441,11 @@ const Page = () => {
                 </div>
                 <div className="w-full space-y-6 md:w-1/2">
                   <p className="text-foreground/80">
-                    I designed a black-white alternating layout that frames the
-                    white plugin as a feature, not a bug.
+                    I{" "}
+                    <span className="font-bold text-primary">
+                      designed a black-white alternating layout
+                    </span>{" "}
+                    that frames the white plugin as a feature, not a bug.
                   </p>
                   <p className="text-foreground/80">
                     <span className="font-bold text-primary">
@@ -459,7 +476,7 @@ const Page = () => {
             {/* Part 1 */}
             <div className="space-y-8">
               <h3 className="font-kalam text-3xl font-normal text-primary">
-                1. I Designed the Site Before Product Photos Existed — So the
+                I Designed the Site Before Product Photos Existed — So the
                 Production Team Could Hit the Ground Running
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -479,10 +496,15 @@ const Page = () => {
               <div className="grid items-center gap-12 md:grid-cols-2">
                 <div className="space-y-4 text-foreground/80">
                   <p>
-                    With only one month from receiving the physical product to
-                    website launch, the Image/Video Production team had zero
-                    room for delays. I couldn&apos;t wait for assets to start
-                    designing.
+                    With{" "}
+                    <span className="font-bold text-primary">
+                      only one month from receiving the physical product
+                    </span>{" "}
+                    to website launch,{" "}
+                    <span className="font-bold text-primary">
+                      the Image/Video Production team had zero room for delays
+                    </span>
+                    . I couldn&apos;t wait for assets to start designing.
                   </p>
                   <p>
                     So I defined the visual direction early — choosing a{" "}
@@ -492,14 +514,27 @@ const Page = () => {
                     </span>
                     , as it complements any product color. This decision kept
                     design moving forward while giving the production team
-                    clarity: they could focus on shooting, knowing the design
-                    foundation was already set.
+                    clarity:{" "}
+                    <span className="font-bold text-primary">
+                      they could focus on shooting, knowing the design
+                      foundation was already set
+                    </span>
+                    .
                   </p>
                 </div>
-                <div className="flex aspect-video items-center justify-center rounded-xl border border-border bg-background">
-                  <span className="text-muted-foreground">
-                    Image Placeholder
-                  </span>
+                <div className="flex flex-col items-center">
+                  <div className="w-full overflow-hidden rounded-2xl">
+                    <Image
+                      src="/aventus-wireframe.png"
+                      alt="Aventus Wireframe"
+                      width={800}
+                      height={450}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-sm text-foreground/60">
+                    Wireframe
+                  </p>
                 </div>
               </div>
             </div>
@@ -507,14 +542,14 @@ const Page = () => {
             {/* Part 2 */}
             <div className="space-y-8">
               <h3 className="font-kalam text-3xl font-normal text-primary">
-                2. I Gave the Production Team a Clear Brief — So They Knew
-                Exactly What to Shoot, No Waste
+                I Gave the Production Team a Clear Brief — So They Knew Exactly
+                What to Shoot, No Waste
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
                   "Proactive Communication",
                   "Workflow Optimization",
-                  "Art Direction",
+                  "Team work",
                 ].map((tag) => (
                   <span
                     key={tag}
@@ -525,10 +560,19 @@ const Page = () => {
                 ))}
               </div>
               <div className="grid items-center gap-12 md:grid-cols-2">
-                <div className="order-2 flex aspect-video items-center justify-center rounded-xl border border-border bg-background md:order-1">
-                  <span className="text-muted-foreground">
-                    Image Placeholder
-                  </span>
+                <div className="order-2 flex flex-col items-center md:order-1">
+                  <div className="w-full overflow-hidden rounded-2xl">
+                    <Image
+                      src="/aventus-communication.png"
+                      alt="Team Communication"
+                      width={800}
+                      height={450}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-sm text-foreground/60">
+                    Team Communication
+                  </p>
                 </div>
                 <div className="order-1 space-y-4 text-foreground/80 md:order-2">
                   <p>
@@ -544,8 +588,11 @@ const Page = () => {
                       formats, and background treatments I needed for each
                       section of the page.
                     </span>{" "}
-                    This gave my colleagues clear direction, saved them from
-                    shooting unnecessary footage, and eliminated revision loops.
+                    <span className="font-bold text-primary">
+                      This gave my colleagues clear direction, saved them from
+                      shooting unnecessary footage, and eliminated revision
+                      loops.
+                    </span>{" "}
                     Their work was usable from day one.
                   </p>
                 </div>
@@ -553,7 +600,7 @@ const Page = () => {
             </div>
 
             {/* Part 3 */}
-            <div className="space-y-8">
+            {/* <div className="space-y-8">
               <h3 className="font-kalam text-3xl font-normal text-primary">
                 3. I Built a Visual System That Guides Users Without
                 Overwhelming Them
@@ -610,12 +657,51 @@ const Page = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
-      {/* ───── Section 4: Bottom Navigation ───── */}
+      {/* ───── Section 4: Achievement ───── */}
+      <section className="w-full bg-background-alt px-6 py-24">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 font-kalam font-bold text-4xl md:text-5xl text-primary">
+              Achievement
+            </h2>
+            <p className="mx-auto max-w-3xl text-xl text-foreground/80">
+              After the Aventus Airbrush website launched,{" "}
+              <span className="font-bold text-primary">
+                Gaahleri&apos;s November sales saw significant year-over-year
+                growth
+              </span>{" "}
+              — validating that a well-structured, brand-consistent product page
+              directly supports conversion.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-3xl overflow-hidden rounded-2xl">
+              <Image
+                src="/aventus-result.png"
+                alt="Gaahleri November Sales Year-over-Year"
+                width={1200}
+                height={675}
+                className="h-auto w-full"
+              />
+            </div>
+            <p className="mt-4 text-center text-sm text-foreground/60">
+              Gaahleri&apos;s November Sales Year-over-Year
+              <br />
+              <span className="italic">
+                Note: Key figures have been blurred for confidentiality.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ───── Section 5: Bottom Navigation ───── */}
       <section className="w-full bg-background pt-24 pb-24">
         <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-6 px-6 sm:flex-row">
           <PrimaryButton
