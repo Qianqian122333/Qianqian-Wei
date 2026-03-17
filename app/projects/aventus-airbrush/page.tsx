@@ -147,21 +147,19 @@ const Page = () => {
 
               {/* Two horizontal videos */}
               <div className="grid gap-8 md:grid-cols-2">
-                <video
-                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted object-contain"
-                  src="/aventus-general.mov"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <iframe
+                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted"
+                  src="https://www.youtube.com/embed/Uuh_2u700I8"
+                  title="Aventus General"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
-                <video
-                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted object-contain"
-                  src="/aventus-tailor.mov"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <iframe
+                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted"
+                  src="https://www.youtube.com/embed/YQelN0rbfuE"
+                  title="Aventus Tailor"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
               </div>
 
@@ -204,13 +202,12 @@ const Page = () => {
                   />
                 </div>
                 {/* Video */}
-                <video
-                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted object-contain"
-                  src="/aventus-uiupdate.mov"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <iframe
+                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted"
+                  src="https://www.youtube.com/embed/rkeZ7_SoYLs"
+                  title="Aventus UI Update"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
               </div>
             </div>
@@ -234,13 +231,12 @@ const Page = () => {
               </div>
 
               <div className="flex justify-center">
-                <video
-                  className="aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-border bg-muted object-contain"
-                  src="/aventus-blackwhite.mov"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <iframe
+                  className="aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-border bg-muted"
+                  src="https://www.youtube.com/embed/c0R1IFB8UiE"
+                  title="Aventus Black White"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
               </div>
             </div>
