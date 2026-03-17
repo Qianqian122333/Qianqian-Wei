@@ -3,6 +3,7 @@ import PrimaryButton from "@/components/PrimaryButton";
 import { Briefcase, Clock, Users } from "lucide-react";
 
 const techStack = [
+  { icon: "/figma.svg", label: "Figma" },
   { icon: "/html.svg", label: "HTML" },
   { icon: "/css.svg", label: "CSS" },
   { icon: "/javascript.svg", label: "JavaScript" },
@@ -126,118 +127,316 @@ const Page = () => {
 
           <div className="space-y-32">
             {/* Challenge 1 */}
-            <div className="space-y-12">
-              <div className="mx-auto max-w-4xl space-y-4">
-                <h3 className="font-kalam font-bold text-3xl text-primary">
-                  Marketing Wanted Everything on One Page — I Restructured IA
-                  for Scanability
-                </h3>
-                <p className="text-foreground/80">
-                  Marketing wanted 11+ selling points crammed onto one page,
-                  causing cognitive overload.
-                  <br />
-                  I restructured the information architecture by splitting
-                  content into two main page and several sub-pages after
-                  negotiating with stakeholders.
-                  <br />
-                  The result is a clean hierarchy that lets users scan faster
-                  and find what matters.
-                </p>
-              </div>
-
-              {/* Two horizontal videos */}
-              <div className="grid gap-8 md:grid-cols-2">
-                <iframe
-                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted"
-                  src="https://www.youtube.com/embed/Uuh_2u700I8"
-                  title="Aventus General"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-                <iframe
-                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted"
-                  src="https://www.youtube.com/embed/YQelN0rbfuE"
-                  title="Aventus Tailor"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-
-              {/* IA Image */}
-              <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
-                <span className="text-muted-foreground p-4 text-center">
-                  IA Diagram — Image Placeholder
-                </span>
-              </div>
-            </div>
-
-            {/* Challenge 2 */}
-            <div className="space-y-12">
-              <div className="mx-auto max-w-4xl space-y-4">
-                <h3 className="font-kalam font-bold text-3xl text-primary">
-                  The Mandated Plugin Broke UX — I Redesigned the UI for Clarity
-                </h3>
-                <p className="text-foreground/80">
-                  The stakeholders mandated a Shopify plugin for customization,
-                  but its template conflicted with our store and offered poor
-                  UX.
-                  <br />
-                  I redesigned and rewrote the plugin&apos;s CSS so users can
-                  see both color swatches and names simultaneously.
-                  <br />
-                  This delivered a custom-like experience with zero extra
-                  development cost.
-                </p>
-              </div>
-
-              <div className="grid items-center gap-12 md:grid-cols-2">
-                {/* Image */}
-                <div className="overflow-hidden rounded-2xl border border-border">
-                  <Image
-                    src="/Aventus%20without%20css.png"
-                    alt="Aventus without CSS"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto"
-                  />
+            <div className="space-y-16">
+              {/* Part A: IA image right (smaller), text left */}
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 md:items-center">
+                <div className="order-first md:order-none space-y-4">
+                  <h3 className="font-kalam font-bold text-3xl text-primary">
+                    Marketing Wanted Everything on One Page — I Restructured IA
+                    for Scanability
+                  </h3>
+                  <p className="hidden md:block text-foreground/80">
+                    Marketing wanted 11+ selling points crammed onto one page,
+                    causing{" "}
+                    <span className="font-bold text-primary">
+                      cognitive overload.
+                    </span>
+                  </p>
                 </div>
-                {/* Video */}
-                <iframe
-                  className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted"
-                  src="https://www.youtube.com/embed/rkeZ7_SoYLs"
-                  title="Aventus UI Update"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                <div className="flex flex-col items-center justify-center">
+                  <div className="w-full max-w-sm overflow-hidden rounded-2xl">
+                    <Image
+                      src="/aventus-structure.png"
+                      alt="Aventus IA Diagram"
+                      width={600}
+                      height={338}
+                      className="h-auto w-full border border-border"
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                    Information Architecture
+                    <br />
+                    11 Product Features into 2 Main Pages and 6 Subpages
+                  </p>
+                </div>
+                <div className="md:hidden">
+                  <p className="text-foreground/80">
+                    Marketing wanted 11+ selling points crammed onto one page,
+                    causing{" "}
+                    <span className="font-bold text-primary">
+                      cognitive overload.
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Part B: two videos left, text right */}
+              <div className="flex flex-col items-center gap-12 md:flex-row">
+                <div className="w-full space-y-4 md:w-1/2">
+                  <div className="flex flex-col items-center">
+                    <div className="w-full overflow-hidden rounded-2xl">
+                      <video
+                        className="h-auto w-full"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source src="/aventus-general.webm" type="video/webm" />
+                        <source src="/aventus-general.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <p className="mt-2 text-center text-sm text-foreground/60">
+                      Main page 1
+                      <br />
+                      Aventus Theme
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div className="w-full overflow-hidden rounded-2xl">
+                      <video
+                        className="h-auto w-full"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source src="/aventus-tailor.webm" type="video/webm" />
+                        <source src="/aventus-tailor.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <p className="mt-2 text-center text-sm text-foreground/60">
+                      Main page 2
+                      <br />
+                      Aventus Tailor Made
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full space-y-6 md:w-1/2">
+                  <p className="text-foreground/80">
+                    I restructured the information architecture by splitting
+                    content into two main page and{" "}
+                    <span className="font-bold text-primary">6 sub-pages</span>{" "}
+                    after negotiating with stakeholders.
+                  </p>
+                  <p className="text-foreground/80">
+                    The result is a{" "}
+                    <span className="font-bold text-primary">
+                      clean hierarchy
+                    </span>{" "}
+                    that lets{" "}
+                    <span className="font-bold text-primary">
+                      users scan faster and find what matters.
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Challenge 3 */}
-            <div className="space-y-12">
-              <div className="mx-auto max-w-4xl space-y-4">
-                <h3 className="font-kalam font-bold text-3xl text-primary">
-                  The White Canvas Clashed with Brand — I Protected Brand
-                  Consistency Through Design
-                </h3>
-                <p className="text-foreground/80">
-                  The plugin&apos;s white canvas clashed with our brand&apos;s
-                  black theme, creating visual friction.
-                  <br />
-                  I designed a black-white alternating layout that frames the
-                  white plugin as a feature, not a bug.
-                  <br />
-                  The purchase flow now feels seamless and brand-consistent.
-                </p>
+            {/* Challenge 2 — zigzag sub-rows */}
+            <div className="space-y-16">
+              {/* Part A: text left, image right */}
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 md:items-center">
+                <div className="order-first md:order-none space-y-4">
+                  <h3 className="font-kalam font-bold text-3xl text-primary">
+                    The Mandated Plugin Broke UX — I Redesigned the UI for
+                    Clarity
+                  </h3>
+                  <p className="hidden md:block text-foreground/80">
+                    The stakeholders mandated a Shopify plugin for
+                    customization, but its template conflicted with our store
+                    and offered{" "}
+                    <span className="font-bold text-primary">poor UI</span>.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-full overflow-hidden rounded-2xl">
+                    <Image
+                      src="/aventus-uiissue.png"
+                      alt="Aventus UI Problem"
+                      width={800}
+                      height={450}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                  <p className="mt-4 text-sm text-primary w-full">
+                    Shopify plugin&apos;s UI has two problem:
+                    <br />
+                    1. Users can only see option images, not option names.
+                    <br />
+                    2. The shopify plugin is incompatible with our store&apos;s
+                    theme template.
+                  </p>
+                </div>
+                <div className="md:hidden">
+                  <p className="text-foreground/80">
+                    The stakeholders mandated a Shopify plugin for
+                    customization, but its template conflicted with our store
+                    and offered{" "}
+                    <span className="font-bold text-primary">poor UI</span>.
+                  </p>
+                </div>
               </div>
 
-              <div className="flex justify-center">
-                <iframe
-                  className="aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-border bg-muted"
-                  src="https://www.youtube.com/embed/c0R1IFB8UiE"
-                  title="Aventus Black White"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+              {/* Part B: image left, text right */}
+              <div className="flex flex-col items-center gap-12 md:flex-row">
+                <div className="w-full md:w-1/2">
+                  <div className="flex flex-col items-center">
+                    <div className="w-full overflow-hidden rounded-2xl">
+                      <Image
+                        src="/aventus-css.png"
+                        alt="Aventus CSS Redesign"
+                        width={800}
+                        height={450}
+                        className="h-auto w-full"
+                      />
+                    </div>
+                    <p className="mt-4 text-center text-sm text-foreground/60 w-full">
+                      CSS
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full space-y-6 md:w-1/2">
+                  <p className="text-foreground/80">
+                    <span className="font-bold text-primary">
+                      I wrote CSS to resolve the shopify plugin conflict.
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Part C: video right, text left */}
+              <div className="flex flex-col items-center gap-12 md:flex-row-reverse">
+                <div className="w-full md:w-1/2">
+                  <div className="flex flex-col items-center">
+                    <div className="w-full overflow-hidden rounded-2xl">
+                      <video
+                        className="h-auto w-full"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source
+                          src="/aventus-uiupdate.webm"
+                          type="video/webm"
+                        />
+                        <source src="/aventus-uiupdate.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <p className="mt-4 text-center text-sm text-foreground/60 w-full">
+                      New UI
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full space-y-6 md:w-1/2">
+                  <p className="text-foreground/80">
+                    <span className="font-bold text-primary">
+                      The redesigned UI allows users to see both option images and
+                      names simultaneously.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Challenge 3 — zigzag: image right, then video left */}
+            <div className="space-y-16">
+              {/* Part A: text left, image right */}
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 md:items-center">
+                <div className="order-first md:order-none space-y-4">
+                  <h3 className="font-kalam font-bold text-3xl text-primary">
+                    The White Canvas Clashed with Brand — I Protected Brand
+                    Consistency Through Design
+                  </h3>
+                  <p className="hidden md:block text-foreground/80">
+                    The{" "}
+                    <span className="font-bold text-primary">
+                      plugin clashed with our brand&apos;s black theme
+                    </span>
+                    , creating visual friction.
+                  </p>
+                </div>
+                <div className="flex w-full flex-col gap-8 items-center">
+                  <div className="flex w-full flex-col items-center">
+                    <div className="w-full overflow-hidden rounded-2xl border border-border/50">
+                      <Image
+                        src="/aventus-blacktheme.png"
+                        alt="Aventus Black Theme"
+                        width={800}
+                        height={450}
+                        className="w-full aspect-[1.91] object-cover object-top"
+                      />
+                    </div>
+                    <p className="mt-4 text-center text-sm text-foreground/60 w-full">
+                      Shop theme color: black
+                    </p>
+                  </div>
+                  <div className="flex w-full flex-col items-center">
+                    <div className="w-full overflow-hidden rounded-2xl border border-border/50">
+                      <Image
+                        src="/aventus-whitebg.png"
+                        alt="Aventus White Background Problem"
+                        width={800}
+                        height={450}
+                        className="w-full aspect-[1.91] object-cover object-top"
+                      />
+                    </div>
+                    <p className="mt-4 text-center text-sm text-foreground/60 w-full">
+                      Cannot change white background
+                    </p>
+                  </div>
+                </div>
+                <div className="md:hidden">
+                  <p className="text-foreground/80">
+                    The{" "}
+                    <span className="font-bold text-primary">
+                      plugin clashed with our brand&apos;s black theme
+                    </span>
+                    , creating visual friction.
+                  </p>
+                </div>
+              </div>
+
+              {/* Part B: video left, text right */}
+              <div className="flex flex-col items-center gap-12 md:flex-row">
+                <div className="w-full md:w-1/2">
+                  <div className="flex flex-col items-center">
+                    <div className="w-full overflow-hidden rounded-2xl">
+                      <video
+                        className="h-auto w-full"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source
+                          src="/aventus-blackwhite.webm"
+                          type="video/webm"
+                        />
+                        <source
+                          src="/aventus-blackwhite.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                    <p className="mt-4 text-center text-sm text-foreground/60 w-full">
+                      black and white design
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full space-y-6 md:w-1/2">
+                  <p className="text-foreground/80">
+                    I designed a black-white alternating layout that frames the
+                    white plugin as a feature, not a bug.
+                  </p>
+                  <p className="text-foreground/80">
+                    <span className="font-bold text-primary">
+                      The purchase flow now feels seamless and brand-consistent
+                    </span>
+                    .
+                  </p>
+                </div>
               </div>
             </div>
           </div>
