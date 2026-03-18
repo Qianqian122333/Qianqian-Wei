@@ -1,5 +1,7 @@
 import Image from "next/image";
 import PrimaryButton from "@/components/PrimaryButton";
+import ZoomableImage from "@/components/ZoomableImage";
+import FeedbackCarousel from "@/components/FeedbackCarousel";
 import { Briefcase, Clock, Users } from "lucide-react";
 
 const techStack = [
@@ -95,14 +97,24 @@ const Page = () => {
             ))}
           </div>
 
-          <div className="mb-24 flex justify-center">
-            <PrimaryButton
-              href="https://gaahleri-color.cleme.store/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Explore Kaleido ColorLab
-            </PrimaryButton>
+          <div className="mb-24 flex flex-col items-center justify-center gap-6">
+            <p className="max-w-md text-center text-sm font-medium text-foreground/80 md:text-base">
+              The project is currently in the beta testing phase. Please contact
+              me for the password.
+            </p>
+            <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+              <PrimaryButton href="/contact" className="w-full sm:w-auto">
+                Contact Me
+              </PrimaryButton>
+              <PrimaryButton
+                href="https://gaahleri-color.cleme.store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:border-primary/50 w-full border border-primary/20 bg-transparent text-primary hover:bg-primary/10 sm:w-auto"
+              >
+                Explore Kaleido ColorLab
+              </PrimaryButton>
+            </div>
           </div>
         </div>
       </section>
@@ -122,12 +134,24 @@ const Page = () => {
           <div className="space-y-32">
             {/* Feature 1 */}
             <div className="flex flex-col items-center gap-12 md:flex-row">
-              <div className="w-full md:w-1/2">
-                <div className="mx-auto flex aspect-9/16 w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
-                  <span className="text-muted-foreground p-4 text-center">
-                    Mobile Vertical Video Placeholder
-                  </span>
+              <div className="w-full md:w-1/2 flex flex-col items-center">
+                <div className="mx-auto flex w-full max-w-[280px] sm:max-w-[320px] items-center justify-center overflow-hidden rounded-3xl border-4 border-border/50 shadow-xl">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto"
+                  >
+                    <source src="/colorlab-picker.webm" type="video/webm" />
+                    <source src="/colorlab-picker.mp4" type="video/mp4" />
+                  </video>
                 </div>
+                <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                  Feature 1
+                  <br />
+                  Image Color Picker
+                </p>
               </div>
               <div className="w-full space-y-6 md:w-1/2">
                 <h3 className="font-kalam font-bold text-3xl text-primary">
@@ -156,12 +180,24 @@ const Page = () => {
 
             {/* Feature 2 */}
             <div className="flex flex-col items-center gap-12 md:flex-row-reverse">
-              <div className="w-full md:w-1/2">
-                <div className="mx-auto flex aspect-9/16 w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
-                  <span className="text-muted-foreground p-4 text-center">
-                    Mobile Vertical Video Placeholder
-                  </span>
+              <div className="w-full md:w-1/2 flex flex-col items-center">
+                <div className="mx-auto flex w-full max-w-[280px] sm:max-w-[320px] items-center justify-center overflow-hidden rounded-3xl border-4 border-border/50 shadow-xl">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto"
+                  >
+                    <source src="/colorlab-colormix.webm" type="video/webm" />
+                    <source src="/colorlab-colormix.mp4" type="video/mp4" />
+                  </video>
                 </div>
+                <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                  Feature 2
+                  <br />
+                  Color Lab
+                </p>
               </div>
               <div className="w-full space-y-6 md:w-1/2">
                 <h3 className="font-kalam font-bold text-3xl text-primary">
@@ -189,12 +225,34 @@ const Page = () => {
 
             {/* Feature 3 */}
             <div className="flex flex-col items-center gap-12 md:flex-row">
-              <div className="w-full md:w-1/2">
-                <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
-                  <span className="text-muted-foreground p-4 text-center">
-                    Horizontal Video Placeholder
-                  </span>
+              <div className="w-full md:w-1/2 flex flex-col items-center">
+                <div className="mx-auto flex w-full max-w-[550px] flex-col overflow-hidden rounded-xl border border-border shadow-2xl bg-muted/30">
+                  <div className="flex h-8 w-full items-center gap-2 border-b border-border bg-muted/50 px-3 shrink-0">
+                    <div className="h-2.5 w-2.5 rounded-full bg-red-500/80"></div>
+                    <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80"></div>
+                    <div className="h-2.5 w-2.5 rounded-full bg-green-500/80"></div>
+                  </div>
+                  <div className="aspect-video w-full bg-background relative">
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 h-full w-full object-cover"
+                    >
+                      <source
+                        src="/colorlab-dashboard.webm"
+                        type="video/webm"
+                      />
+                      <source src="/colorlab-dashboard.mp4" type="video/mp4" />
+                    </video>
+                  </div>
                 </div>
+                <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                  Feature 3
+                  <br />
+                  Dashboard
+                </p>
               </div>
               <div className="w-full space-y-6 md:w-1/2">
                 <h3 className="font-kalam font-bold text-3xl text-primary">
@@ -220,7 +278,7 @@ const Page = () => {
             </div>
 
             {/* Feature 4 */}
-            <div className="space-y-12">
+            <div className="space-y-16">
               <div className="mx-auto max-w-3xl space-y-4 text-center">
                 <p className="text-sm uppercase tracking-wider text-foreground">
                   -- Most Memorable Feature Moment --
@@ -232,42 +290,79 @@ const Page = () => {
                   Solving Screen Color Variation with User Notes
                 </h4>
               </div>
-              <div className="grid gap-12 md:grid-cols-2">
-                <div className="space-y-6">
-                  <div className="flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
-                    <span className="text-muted-foreground p-4 text-center">
-                      Image Placeholder 1
-                    </span>
+              <div className="flex flex-col gap-16">
+                {/* 错落显示：左图右文 */}
+                <div className="flex flex-col items-center gap-12 md:flex-row">
+                  <div className="w-full relative md:w-5/12 mx-auto max-w-[350px] flex flex-col items-center">
+                    <ZoomableImage
+                      src="/colorlab-memorymoment.png"
+                      alt="Colorlab Memory Moment"
+                      width={800}
+                      height={800}
+                      className="w-full"
+                    />
+                    <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                      Demo Video Stage
+                      <br />
+                      User&apos;s Feedback
+                    </p>
                   </div>
-                  <p className="text-foreground/80">
-                    After releasing our demo video,{" "}
-                    <span className="font-bold text-primary">
-                      users pointed out a potential flaw
-                    </span>
-                    : phone screens display colors differently, making our
-                    digital color matching unreliable.{" "}
-                    <span className="font-bold text-primary">
-                      However, We couldn&apos;t control user’s hardware.
-                    </span>
-                  </p>
+                  <div className="w-full md:w-7/12">
+                    <p className="text-foreground/80 text-lg">
+                      After releasing our demo video,{" "}
+                      <span className="font-bold text-primary">
+                        users pointed out a potential flaw
+                      </span>
+                      : phone screens display colors differently, making our
+                      digital color matching unreliable.{" "}
+                      <span className="font-bold text-primary">
+                        However, We couldn&apos;t control user’s hardware.
+                      </span>
+                    </p>
+                  </div>
                 </div>
-                <div className="space-y-6">
-                  <div className="flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
-                    <span className="text-muted-foreground p-4 text-center">
-                      Image Placeholder 2
-                    </span>
+
+                {/* 错落显示：左文右视频 */}
+                <div className="flex flex-col items-center gap-12 md:flex-row-reverse">
+                  <div className="w-full md:w-7/12 flex flex-col items-center">
+                    <div className="mx-auto flex w-full max-w-[550px] flex-col overflow-hidden rounded-xl border border-border shadow-2xl bg-muted/30">
+                      <div className="flex h-8 w-full items-center gap-2 border-b border-border bg-muted/50 px-3 shrink-0">
+                        <div className="h-2.5 w-2.5 rounded-full bg-red-500/80"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-green-500/80"></div>
+                      </div>
+                      <div className="aspect-video w-full bg-background relative">
+                        <video
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="absolute inset-0 h-full w-full object-cover"
+                        >
+                          <source src="/colorlab-note.webm" type="video/webm" />
+                          <source src="/colorlab-note.mp4" type="video/mp4" />
+                        </video>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                      Feature 4
+                      <br />
+                      Color Note
+                    </p>
                   </div>
-                  <p className="text-foreground/80">
-                    I designed a personal color notebook feature. Users can
-                    treat on-screen colors as reference, then document their
-                    real-world mixing process—recording exact ratios and
-                    techniques for future projects.{" "}
-                    <span className="font-bold text-primary">
-                      This turns a technical limitation into a user-powered
-                      solution, ensuring our tool remains useful beyond
-                      different screens.
-                    </span>
-                  </p>
+                  <div className="w-full md:w-5/12">
+                    <p className="text-foreground/80 text-lg">
+                      I designed a personal color notebook feature. Users can
+                      treat on-screen colors as reference, then document their
+                      real-world mixing process—recording exact ratios and
+                      techniques for future projects.{" "}
+                      <span className="font-bold text-primary">
+                        This turns a technical limitation into a user-powered
+                        solution, ensuring our tool remains useful beyond
+                        different screens.
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -333,10 +428,18 @@ const Page = () => {
                     products—it was becoming part of the creative process.
                   </p>
                 </div>
-                <div className="flex aspect-video items-center justify-center rounded-xl border border-border bg-background">
-                  <span className="text-muted-foreground">
-                    Image Placeholder
-                  </span>
+                <div className="w-full flex flex-col items-center">
+                  <ZoomableImage
+                    src="/colorlab-journey.png"
+                    alt="Discover & Research User Journey Map"
+                    width={1000}
+                    height={700}
+                    className="w-full bg-white rounded-xl flex items-center justify-center p-4"
+                    imageClassName="w-full h-auto object-contain"
+                  />
+                  <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                    User Journey Map
+                  </p>
                 </div>
               </div>
             </div>
@@ -361,10 +464,19 @@ const Page = () => {
                 ))}
               </div>
               <div className="grid items-center gap-12 md:grid-cols-2">
-                <div className="order-2 flex aspect-video items-center justify-center rounded-xl border border-border bg-background md:order-1">
-                  <span className="text-muted-foreground">
-                    Image Placeholder
-                  </span>
+                <div className="order-2 flex w-full flex-col items-center md:order-1">
+                  <div className="relative flex w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-background shadow-sm hover:shadow-md transition-shadow">
+                    <Image
+                      src="/colorlab-code.png"
+                      alt="Code as Credibility"
+                      width={1000}
+                      height={700}
+                      className="h-auto w-full object-contain"
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                    Using code to prove an idea&apos;s feasibility
+                  </p>
                 </div>
                 <div className="order-1 space-y-4 text-foreground/80 md:order-2">
                   <p>
@@ -438,10 +550,25 @@ const Page = () => {
                     </span>
                   </p>
                 </div>
-                <div className="flex aspect-video items-center justify-center rounded-xl border border-border bg-background">
-                  <span className="text-muted-foreground">
-                    Image Placeholder
-                  </span>
+                <div className="flex w-full flex-col items-center">
+                  <div className="relative flex w-full overflow-hidden rounded-xl border border-border bg-background shadow-lg">
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="h-auto w-full object-cover"
+                    >
+                      <source
+                        src="/colorlab-prototype.webm"
+                        type="video/webm"
+                      />
+                      <source src="/colorlab-prototype.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                    High-fidelity Prototype
+                  </p>
                 </div>
               </div>
             </div>
@@ -465,13 +592,22 @@ const Page = () => {
                   </span>
                 ))}
               </div>
-              <div className="grid items-center gap-12 md:grid-cols-2">
-                <div className="order-2 flex aspect-video w-full items-center justify-center rounded-xl border border-border bg-background md:order-1">
-                  <span className="text-muted-foreground">
-                    Image Placeholder
-                  </span>
+              <div className="flex flex-col gap-10 mt-8">
+                <div className="w-full flex flex-col items-center">
+                  <div className="w-full">
+                    <FeedbackCarousel
+                      images={[
+                        "/colorlab-1.jpeg",
+                        "/colorlab-2.jpeg",
+                        "/colorlab-3.jpeg",
+                      ]}
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                    User&apos;s Love
+                  </p>
                 </div>
-                <div className="order-1 space-y-4 text-foreground/80 md:order-2">
+                <div className="mx-auto w-full max-w-4xl space-y-4 text-foreground/80 md:text-lg">
                   <p>
                     Before committing to full development, we released a teaser
                     video comparing the proposed Help Center with the working
@@ -511,15 +647,18 @@ const Page = () => {
                   ),
                 )}
               </div>
-              <div className="grid items-center gap-12 md:grid-cols-2">
-                <div className="space-y-4 text-foreground/80">
+              <div className="grid items-start gap-8 md:grid-cols-2 mt-8">
+                <div className="space-y-4 text-foreground/80 md:mt-4">
                   <p>
                     <span className="font-bold text-primary">
                       I redesigned the UI by establishing a cohesive design
                       system
                     </span>{" "}
                     —defining a new color palette and component library for
-                    visual consistency. I then built the front end using{" "}
+                    visual consistency.
+                  </p>
+                  <p>
+                    I then built the front end using{" "}
                     <span className="font-bold text-primary">
                       Next.js, TypeScript, and Tailwind CSS
                     </span>
@@ -527,19 +666,50 @@ const Page = () => {
                     responsive code.
                   </p>
                 </div>
-                <div className="flex aspect-video items-center justify-center rounded-xl border border-border bg-background">
-                  <span className="text-muted-foreground">
-                    Image Placeholder
-                  </span>
+                <div className="w-full flex justify-center">
+                  <div className="flex w-full max-w-[340px] md:max-w-[420px] flex-col items-center">
+                    <div className="relative flex w-full items-center justify-center overflow-hidden rounded-xl border border-border/50 shadow-lg bg-background">
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-auto object-cover"
+                      >
+                        <source
+                          src="/colorlab-uidesign.webm"
+                          type="video/webm"
+                        />
+                        <source src="/colorlab-uidesign.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <p className="mt-4 text-center text-sm text-foreground/60 max-w-sm">
+                      UI Design Iteration
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-32 text-center">
-            <p className="font-kalam text-3xl text-foreground">
-              version 2 will come soon...
+          <div className="mt-32 flex flex-col items-center justify-center gap-6">
+            <p className="max-w-md text-center text-sm font-medium text-foreground/80 md:text-base">
+              The project is currently in the beta testing phase. Please contact
+              me for the password.
             </p>
+            <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+              <PrimaryButton href="/contact" className="w-full sm:w-auto">
+                Contact Me
+              </PrimaryButton>
+              <PrimaryButton
+                href="https://gaahleri-color.cleme.store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:border-primary/50 w-full border border-primary/20 bg-transparent text-primary hover:bg-primary/10 sm:w-auto"
+              >
+                Explore Kaleido ColorLab
+              </PrimaryButton>
+            </div>
           </div>
         </div>
       </section>
