@@ -34,9 +34,10 @@ const projectsSubItems = [
 ];
 
 const navItems = [
-  { label: "About", href: "/about" },
+  { label: "About", href: "/" },
   { label: "Projects", href: "/projects", children: projectsSubItems },
   { label: "Contact", href: "/contact" },
+  { label: "Resume", href: "/QianqianWei-CV.pdf", target: "_blank" },
 ];
 
 /* ───── Desktop / Tablet nav (md+) ───── */
@@ -71,7 +72,15 @@ function DesktopNav() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href={item.href}>{item.label}</Link>
+                <Link
+                  href={item.href}
+                  target={item.target}
+                  rel={
+                    item.target === "_blank" ? "noopener noreferrer" : undefined
+                  }
+                >
+                  {item.label}
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           ),
@@ -110,7 +119,15 @@ function MobileNav() {
               </DropdownMenuSub>
             ) : (
               <DropdownMenuItem key={item.label} asChild>
-                <Link href={item.href}>{item.label}</Link>
+                <Link
+                  href={item.href}
+                  target={item.target}
+                  rel={
+                    item.target === "_blank" ? "noopener noreferrer" : undefined
+                  }
+                >
+                  {item.label}
+                </Link>
               </DropdownMenuItem>
             ),
           )}
