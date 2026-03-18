@@ -5,6 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -42,13 +44,22 @@ const navItems = [
 
 /* ───── Desktop / Tablet nav (md+) ───── */
 function DesktopNav() {
+  const pathname = usePathname();
+
   return (
     <NavigationMenu className="hidden md:flex" viewport={false}>
       <NavigationMenuList>
         {navItems.map((item) =>
           item.children ? (
             <NavigationMenuItem key={item.label}>
-              <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
+              <NavigationMenuTrigger
+                className={cn(
+                  pathname.startsWith("/projects") &&
+                    "text-primary font-medium",
+                )}
+              >
+                {item.label}
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-40 gap-1 p-2">
                   {item.children.map((child) => (
@@ -56,7 +67,12 @@ function DesktopNav() {
                       <NavigationMenuLink asChild>
                         <Link
                           href={child.href}
-                          className="block rounded-md px-3 py-2 text-sm md:text-base"
+                          className={cn(
+                            "block rounded-md px-3 py-2 text-sm md:text-base transition-colors hover:text-primary focus:text-primary",
+                            pathname === child.href
+                              ? "text-primary font-medium"
+                              : "text-muted-foreground",
+                          )}
                         >
                           {child.label}
                         </Link>
@@ -70,7 +86,11 @@ function DesktopNav() {
             <NavigationMenuItem key={item.label}>
               <NavigationMenuLink
                 asChild
-                className={navigationMenuTriggerStyle()}
+                active={pathname === item.href}
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  pathname === item.href && "text-primary font-medium",
+                )}
               >
                 <Link
                   href={item.href}
@@ -92,6 +112,8 @@ function DesktopNav() {
 
 /* ───── Mobile nav (< md) ───── */
 function MobileNav() {
+  const pathname = usePathname();
+
   return (
     <div className="md:hidden">
       <DropdownMenu>
@@ -108,11 +130,25 @@ function MobileNav() {
           {navItems.map((item) =>
             item.children ? (
               <DropdownMenuSub key={item.label}>
-                <DropdownMenuSubTrigger>{item.label}</DropdownMenuSubTrigger>
+                <DropdownMenuSubTrigger
+                  className={cn(
+                    pathname.startsWith("/projects") &&
+                      "text-primary font-medium",
+                  )}
+                >
+                  {item.label}
+                </DropdownMenuSubTrigger>
                 <DropdownMenuSubContent>
                   {item.children.map((child) => (
                     <DropdownMenuItem key={child.label} asChild>
-                      <Link href={child.href}>{child.label}</Link>
+                      <Link
+                        href={child.href}
+                        className={cn(
+                          pathname === child.href && "text-primary font-medium",
+                        )}
+                      >
+                        {child.label}
+                      </Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuSubContent>
@@ -125,6 +161,10 @@ function MobileNav() {
                   rel={
                     item.target === "_blank" ? "noopener noreferrer" : undefined
                   }
+                  className={cn(
+                    "block w-full",
+                    pathname === item.href && "text-primary font-medium",
+                  )}
                 >
                   {item.label}
                 </Link>
