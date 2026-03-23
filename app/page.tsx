@@ -24,6 +24,7 @@ import {
   PenTool,
 } from "lucide-react";
 import PrimaryButton from "@/components/PrimaryButton";
+import HeroSection from "@/components/HeroSection";
 
 const uxSkills = [
   { icon: Search, label: "User Research" },
@@ -171,16 +172,7 @@ export default function Home() {
   return (
     <main className="w-full pb-24 bg-background">
       {/* ───── Section 1: Hero ───── */}
-      <section className="w-full">
-        <Image
-          src="/about-hero.png"
-          alt="Hero"
-          width={1920}
-          height={600}
-          className="w-full h-auto object-cover"
-          priority
-        />
-      </section>
+      <HeroSection />
 
       {/* ───── Section 2: Real-World Projects ───── */}
       <section className="mx-auto max-w-5xl px-6 py-24">
