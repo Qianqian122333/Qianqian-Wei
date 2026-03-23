@@ -165,3 +165,28 @@
 @utility hero-label-float {
   animation: hero-icon-float 3s ease-in-out infinite;
 }
+
+/* Splash book-flip animation */
+@keyframes splash-book-flip {
+  0% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: rotateY(-90deg) scale(1.05);
+    opacity: 1;
+  }
+  70% {
+    transform: rotateY(-160deg) scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotateY(-180deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.splash-book-flip {
+  animation: splash-book-flip 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transform-origin: left center;
+}

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useSplash } from "./SplashContext";
 
 type HeroWord = { text: string; primary: boolean };
 
@@ -46,8 +47,10 @@ export default function HeroSection() {
   const [showContent, setShowContent] = useState(false);
   const [iconsAnimating, setIconsAnimating] = useState(false);
   const [heroTilted, setHeroTilted] = useState(false);
+  const { entered } = useSplash();
 
   useEffect(() => {
+    if (!entered) return;
     const t1 = setTimeout(() => setShowWords(true), 300);
     const t2 = setTimeout(
       () => setShowContent(true),
@@ -57,7 +60,7 @@ export default function HeroSection() {
       clearTimeout(t1);
       clearTimeout(t2);
     };
-  }, []);
+  }, [entered]);
 
   // Hero image tilt: tilt on click/hover, auto-restore after 600ms
   const triggerHeroTilt = () => {

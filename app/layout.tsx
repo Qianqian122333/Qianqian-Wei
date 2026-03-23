@@ -2,8 +2,10 @@ import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter, Kalam } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
+import NavWithSplash from "@/components/NavWithSplash";
 import Footer from "@/components/Footer";
+import { SplashProvider } from "@/components/SplashContext";
+import SplashOverlay from "@/components/SplashOverlay";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,9 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${kalam.variable} antialiased`}>
-        <Nav />
-        {children}
-        <Footer />
+        <SplashProvider>
+          <SplashOverlay />
+          <NavWithSplash />
+          {children}
+          <Footer />
+        </SplashProvider>
         <Analytics />
       </body>
     </html>
