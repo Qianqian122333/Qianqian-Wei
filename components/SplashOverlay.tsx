@@ -64,11 +64,11 @@ export default function SplashOverlay() {
           You discovered Qianqian&apos;s notebook! 🥺💖
         </p>
         {/* Desktop */}
-        <p className="hidden md:block text-primary text-base sm:text-lg md:text-xl">
+        <p className="hidden md:block text-primary text-base sm:text-lg md:text-xl splash-hint-pulse">
           Click the notebook to discover her secrets ~ ✨
         </p>
         {/* Mobile */}
-        <p className="md:hidden text-primary text-lg sm:text-xl">
+        <p className="md:hidden text-primary text-lg sm:text-xl splash-hint-pulse">
           Tap the notebook to discover her secrets ~ ✨
         </p>
       </div>

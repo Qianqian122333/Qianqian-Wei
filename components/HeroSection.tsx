@@ -73,7 +73,7 @@ export default function HeroSection() {
 
   return (
     <section className="w-full min-h-[80vh] flex items-center overflow-hidden">
-      <div className="mx-auto max-w-6xl w-full px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-14">
+      <div className="mx-auto max-w-7xl w-full px-4 sm:px-8 py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-14">
         {/* Left: Hero Image — tilt on click/hover, auto-restore */}
         <div
           className={`w-full md:w-[45%] flex justify-center shrink-0 transition-all duration-700 ease-out ${
@@ -83,9 +83,9 @@ export default function HeroSection() {
           <Image
             src="/home-hero.png"
             alt="Qianqian Wei"
-            width={600}
-            height={600}
-            className={`w-full max-w-[320px] md:max-w-none h-auto object-contain transition-transform duration-500 ease-out cursor-pointer ${
+            width={2000}
+            height={2000}
+            className={`w-full max-w-[98vw] sm:max-w-[98vw] md:max-w-[1100px] lg:max-w-[1400px] h-auto object-contain transition-transform duration-500 ease-out cursor-pointer ${
               heroTilted ? "rotate-[6deg] scale-[1.02]" : "rotate-0 scale-100"
             }`}
             priority
@@ -171,11 +171,11 @@ export default function HeroSection() {
 
           {/* Tech Stack Icons — animate only when iconsAnimating is true */}
           <div
-            className={`grid grid-cols-5 md:grid-cols-10 gap-3 md:gap-4 items-start justify-items-center md:justify-items-start transition-all duration-700 ease-out ${
-              showContent
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
+            className={`
+              grid grid-cols-5 grid-rows-2 gap-3 items-start justify-items-center transition-all duration-700 ease-out
+              md:gap-5 md:justify-start
+              ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+            `}
             style={{ transitionDelay: "200ms" }}
           >
             {techStack.map((tech, i) => (

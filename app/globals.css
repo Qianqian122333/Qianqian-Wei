@@ -190,3 +190,20 @@
   animation: splash-book-flip 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   transform-origin: left center;
 }
+
+/* Splash hint text pulse */
+@keyframes splash-hint-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.03);
+  }
+}
+
+.splash-hint-pulse {
+  animation: splash-hint-pulse 2s ease-in-out infinite;
+}
