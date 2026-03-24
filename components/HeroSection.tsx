@@ -81,7 +81,7 @@ export default function HeroSection() {
           }`}
         >
           <Image
-            src="/home-hero.png"
+            src="/home-hero.webp"
             alt="Qianqian Wei"
             width={2000}
             height={2000}
@@ -134,7 +134,7 @@ export default function HeroSection() {
               {/* Business — left, takes 3 cols */}
               <div className="col-span-3 rounded-xl overflow-hidden transition-transform duration-500 ease-out hover:-translate-y-2 hover:-translate-x-1 cursor-pointer">
                 <Image
-                  src="/home-business.png"
+                  src="/home-business.webp"
                   alt="Business Design"
                   width={400}
                   height={400}
@@ -144,7 +144,7 @@ export default function HeroSection() {
               {/* User — right, takes 2 cols */}
               <div className="col-span-2 rounded-xl overflow-hidden transition-transform duration-500 ease-out hover:-translate-y-2 hover:translate-x-1 cursor-pointer">
                 <Image
-                  src="/home-user.png"
+                  src="/home-user.webp"
                   alt="User Research"
                   width={300}
                   height={300}
@@ -158,7 +158,7 @@ export default function HeroSection() {
                   onClick={() => setIconsAnimating((prev) => !prev)}
                 >
                   <Image
-                    src="/home-code.png"
+                    src="/home-code.webp"
                     alt="Code Development"
                     width={600}
                     height={360}

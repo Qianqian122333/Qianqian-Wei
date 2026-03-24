@@ -27,7 +27,7 @@ const Page = () => {
 
         <div className="relative w-full mb-16">
           <Image
-            src="/aventus-hero.png"
+            src="/aventus-hero.webp"
             alt="Aventus Airbrush Hero"
             width={1920}
             height={1080}
@@ -146,7 +146,7 @@ const Page = () => {
                 <div className="flex flex-col items-center justify-center">
                   <div className="w-full max-w-sm overflow-hidden rounded-2xl">
                     <Image
-                      src="/aventus-structure.png"
+                      src="/aventus-structure.webp"
                       alt="Aventus IA Diagram"
                       width={600}
                       height={338}
@@ -259,7 +259,7 @@ const Page = () => {
                 <div className="flex flex-col items-center">
                   <div className="w-full overflow-hidden rounded-2xl">
                     <Image
-                      src="/aventus-uiissue.png"
+                      src="/aventus-uiissue.webp"
                       alt="Aventus UI Problem"
                       width={800}
                       height={450}
@@ -298,7 +298,7 @@ const Page = () => {
                   <div className="flex flex-col items-center">
                     <div className="w-full overflow-hidden rounded-2xl">
                       <Image
-                        src="/aventus-mycss.png"
+                        src="/aventus-mycss.webp"
                         alt="Aventus CSS Redesign"
                         width={800}
                         height={450}
@@ -375,7 +375,7 @@ const Page = () => {
                   <div className="flex w-full flex-col items-center">
                     <div className="w-full overflow-hidden rounded-2xl border border-border/50">
                       <Image
-                        src="/aventus-blacktheme.png"
+                        src="/aventus-blacktheme.webp"
                         alt="Aventus Black Theme"
                         width={800}
                         height={450}
@@ -389,7 +389,7 @@ const Page = () => {
                   <div className="flex w-full flex-col items-center">
                     <div className="w-full overflow-hidden rounded-2xl border border-border/50">
                       <Image
-                        src="/aventus-whitebg.png"
+                        src="/aventus-whitebg.webp"
                         alt="Aventus White Background Problem"
                         width={800}
                         height={450}
@@ -525,7 +525,7 @@ const Page = () => {
                 <div className="flex flex-col items-center">
                   <div className="w-full overflow-hidden rounded-2xl">
                     <Image
-                      src="/aventus-wireframe.png"
+                      src="/aventus-wireframe.webp"
                       alt="Aventus Wireframe"
                       width={800}
                       height={450}
@@ -563,7 +563,7 @@ const Page = () => {
                 <div className="order-2 flex flex-col items-center md:order-1">
                   <div className="w-full overflow-hidden rounded-2xl">
                     <Image
-                      src="/aventus-communication.png"
+                      src="/aventus-communication.webp"
                       alt="Team Communication"
                       width={800}
                       height={450}
@@ -683,7 +683,7 @@ const Page = () => {
           <div className="flex flex-col items-center">
             <div className="w-full max-w-3xl overflow-hidden rounded-2xl">
               <Image
-                src="/aventus-result.png"
+                src="/aventus-result.webp"
                 alt="Gaahleri November Sales Year-over-Year"
                 width={1200}
                 height={675}

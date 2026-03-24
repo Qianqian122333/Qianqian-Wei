@@ -43,7 +43,7 @@ export default function SplashOverlay() {
         onMouseEnter={triggerTilt}
       >
         <Image
-          src="/home-hero.png"
+          src="/home-hero.webp"
           alt="Qianqian's Notebook"
           width={400}
           height={400}

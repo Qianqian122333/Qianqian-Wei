@@ -33,7 +33,7 @@ const Page = () => {
 
         <div className="relative w-full mb-16">
           <Image
-            src="/colorlab-heropic.png"
+            src="/colorlab-heropic.webp"
             alt="Kaleido ColorLab Hero"
             width={1920}
             height={1080}
@@ -295,7 +295,7 @@ const Page = () => {
                 <div className="flex flex-col items-center gap-12 md:flex-row">
                   <div className="w-full relative md:w-5/12 mx-auto max-w-[350px] flex flex-col items-center">
                     <ZoomableImage
-                      src="/colorlab-memorymoment.png"
+                      src="/colorlab-memorymoment.webp"
                       alt="Colorlab Memory Moment"
                       width={800}
                       height={800}
@@ -430,7 +430,7 @@ const Page = () => {
                 </div>
                 <div className="w-full flex flex-col items-center">
                   <ZoomableImage
-                    src="/colorlab-journey.png"
+                    src="/colorlab-journey.webp"
                     alt="Discover & Research User Journey Map"
                     width={1000}
                     height={700}
@@ -467,7 +467,7 @@ const Page = () => {
                 <div className="order-2 flex w-full flex-col items-center md:order-1">
                   <div className="relative flex w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-background shadow-sm hover:shadow-md transition-shadow">
                     <Image
-                      src="/colorlab-code.png"
+                      src="/colorlab-code.webp"
                       alt="Code as Credibility"
                       width={1000}
                       height={700}
@@ -597,9 +597,9 @@ const Page = () => {
                   <div className="w-full">
                     <FeedbackCarousel
                       images={[
-                        "/colorlab-1.jpeg",
-                        "/colorlab-2.jpeg",
-                        "/colorlab-3.jpeg",
+                        "/colorlab-1.webp",
+                        "/colorlab-2.webp",
+                        "/colorlab-3.webp",
                       ]}
                     />
                   </div>

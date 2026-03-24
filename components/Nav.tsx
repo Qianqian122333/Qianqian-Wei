@@ -179,8 +179,8 @@ function MobileNav() {
 
 /* ───── logo map (pathname prefix → logo) ───── */
 const logoMap: Record<string, string> = {
-  "/projects/kaleido-colorlab": "/logo-colorlab.png",
-  "/projects/aventus-airbrush": "/Aventus-logo.png",
+  "/projects/kaleido-colorlab": "/logo-colorlab.webp",
+  "/projects/aventus-airbrush": "/Aventus-logo.webp",
 };
 
 function useLogo() {
@@ -188,7 +188,7 @@ function useLogo() {
   for (const [prefix, src] of Object.entries(logoMap)) {
     if (pathname.startsWith(prefix)) return src;
   }
-  return "/logo-default.png";
+  return "/logo-default.webp";
 }
 
 /* ───── Nav (exported) ───── */

@@ -141,30 +141,30 @@ const journeySteps = [
   {
     title: 'The "Aha!" Moment: When Sociology Met Its Tech Soulmate 🎓✨',
     desc: "It all started at a UCL career talk! Seeing a Sociology grad thrive in tech was the spark I needed. I realized that my passion for understanding people was the perfect fuel for UX, and my love for logic was a match for Front-End.",
-    image: "/about-journey.png",
+    image: "/about-journey.webp",
   },
   {
     title:
       'The "Double Life": Coding and Design by Day,  Empathy by Night 🌙☕',
     desc: 'By night, I was on the customer experience team member, heart-to-heart with real users in Customer Experience. By day, I was a programmer and designer! This "double life" taught me how to translate real-world painpoints into digital solutions while most people were dreaming.',
-    image: "/about-journey2.png",
+    image: "/about-journey2.webp",
   },
   {
     title: 'Leveling Up: Crafting My "UX + Front-End" Superpowers 🎨💻',
     desc: 'I dove headfirst into the Google UX Certificate while teaching myself the magic of Coding. I didn’t just want to "draw" pretty screens; I wanted to build them!',
-    image: "/about-journey3.png",
+    image: "/about-journey3.webp",
   },
   {
     title:
       'From Student to Architect: Owning the Full "Concept-to-Code" Loop 🛠️🎈',
     desc: 'I stepped into the professional arena and took the lead! I didn’t just hand over designs; I owned two major projects from the first sketch to the final line of code. From holiday campaigns to full-stack features, I proved that "Design + Dev" is a winning combo.',
-    image: "/about-journey4.png",
+    image: "/about-journey4.webp",
   },
   {
     title:
       "The Marathon Continues: Juggling a Master’s in IT & My Dream Career 📚🚀",
     desc: "Growth is my favorite hobby! Even with a full-time role, I’m now pursuing a Master’s in Information Technology. Why? Because the tech world moves fast, and I’m determined to move even faster. The journey has just begun!",
-    image: "/about-journey5.png",
+    image: "/about-journey5.webp",
   },
 ];
 
@@ -188,7 +188,7 @@ export default function Home() {
               className="w-full max-w-4xl mb-8 overflow-hidden rounded-xl"
             >
               <Image
-                src="/about-project1.png"
+                src="/about-project1.webp"
                 alt="Kaleido ColorLab Project Preview"
                 width={1200}
                 height={800}
@@ -228,7 +228,7 @@ export default function Home() {
               className="w-full max-w-4xl mb-8 overflow-hidden rounded-xl"
             >
               <Image
-                src="/about-project2.png"
+                src="/about-project2.webp"
                 alt="Gaahleri Shop Project Preview"
                 width={1200}
                 height={800}
@@ -485,7 +485,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-3/5">
               <Image
-                src="/about-education.png"
+                src="/about-education.webp"
                 alt="My Education"
                 width={1200}
                 height={600}
@@ -697,7 +697,7 @@ export default function Home() {
             <div className="group rounded-2xl border border-border bg-background p-6">
               <div className="w-full aspect-4/3 rounded-xl mb-6 overflow-hidden">
                 <Image
-                  src="/hanfu.jpg"
+                  src="/hanfu.webp"
                   alt="Hanfu Model"
                   width={600}
                   height={400}
@@ -718,7 +718,7 @@ export default function Home() {
             <div className="group rounded-2xl border border-border bg-background p-6">
               <div className="w-full aspect-4/3 rounded-xl mb-6 overflow-hidden">
                 <Image
-                  src="/morning.jpg"
+                  src="/morning.webp"
                   alt="Early Bird"
                   width={600}
                   height={400}
@@ -739,7 +739,7 @@ export default function Home() {
             <div className="group rounded-2xl border border-border bg-background p-6">
               <div className="w-full aspect-4/3 rounded-xl mb-6 overflow-hidden">
                 <Image
-                  src="/animal.jpg"
+                  src="/animal.webp"
                   alt="Animal Lover"
                   width={600}
                   height={400}
@@ -761,7 +761,7 @@ export default function Home() {
             <div className="group rounded-2xl border border-border bg-background p-6">
               <div className="w-full aspect-4/3 rounded-xl mb-6 overflow-hidden">
                 <Image
-                  src="/nature.jpg"
+                  src="/nature.webp"
                   alt="Nature"
                   width={600}
                   height={400}
