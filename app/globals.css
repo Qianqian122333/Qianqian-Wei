@@ -207,3 +207,73 @@
 .splash-hint-pulse {
   animation: splash-hint-pulse 2s ease-in-out infinite;
 }
+
+/* ═══ Custom animations (inside @layer base for Tailwind v4 compat) ═══ */
+@layer base {
+  /* ── Hero text wave on hover ── */
+  @keyframes hero-wave {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+
+  .hero-text-wave:hover span {
+    animation: hero-wave 1.2s ease-in-out infinite !important;
+  }
+
+  .hero-text-wave:hover div:nth-child(1) span:nth-child(1) { animation-delay: 0s !important; }
+  .hero-text-wave:hover div:nth-child(1) span:nth-child(2) { animation-delay: 0.08s !important; }
+  .hero-text-wave:hover div:nth-child(1) span:nth-child(3) { animation-delay: 0.16s !important; }
+  .hero-text-wave:hover div:nth-child(1) span:nth-child(4) { animation-delay: 0.24s !important; }
+  .hero-text-wave:hover div:nth-child(2) span:nth-child(1) { animation-delay: 0.32s !important; }
+  .hero-text-wave:hover div:nth-child(2) span:nth-child(2) { animation-delay: 0.40s !important; }
+  .hero-text-wave:hover div:nth-child(2) span:nth-child(3) { animation-delay: 0.48s !important; }
+  .hero-text-wave:hover div:nth-child(2) span:nth-child(4) { animation-delay: 0.56s !important; }
+  .hero-text-wave:hover div:nth-child(2) span:nth-child(5) { animation-delay: 0.64s !important; }
+  .hero-text-wave:hover div:nth-child(3) span:nth-child(1) { animation-delay: 0.72s !important; }
+  .hero-text-wave:hover div:nth-child(3) span:nth-child(2) { animation-delay: 0.80s !important; }
+  .hero-text-wave:hover div:nth-child(3) span:nth-child(3) { animation-delay: 0.88s !important; }
+
+  /* ── Tech icon bounce on hover ── */
+  @keyframes tech-bounce {
+    0%   { transform: translateY(0) scale(1); }
+    30%  { transform: translateY(-8px) scale(1.15); }
+    55%  { transform: translateY(-2px) scale(1.05); }
+    75%  { transform: translateY(-5px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  .tech-icon-hover:hover .tech-icon-inner {
+    animation: tech-bounce 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards !important;
+  }
+  .tech-icon-hover:hover .tech-label {
+    animation: hero-wave 1s ease-in-out 1 forwards !important;
+  }
+
+  /* ── Emoji orbit (🚀) ── */
+  @keyframes emoji-orbit {
+    0%   { transform: rotate(0deg) translateX(22px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(22px) rotate(-360deg); }
+  }
+
+  .emoji-orbit-active {
+    display: inline-block;
+    animation: emoji-orbit 0.8s linear 1 forwards !important;
+  }
+
+  /* ── Emoji shake (💼🎓🛠️🌱✨) ── */
+  @keyframes emoji-shake {
+    0%, 100% { transform: rotate(0deg); }
+    15%      { transform: rotate(-12deg); }
+    30%      { transform: rotate(10deg); }
+    45%      { transform: rotate(-8deg); }
+    60%      { transform: rotate(6deg); }
+    75%      { transform: rotate(-3deg); }
+    90%      { transform: rotate(2deg); }
+  }
+
+  .emoji-shake-active {
+    display: inline-block;
+    animation: emoji-shake 0.7s ease-in-out 1 forwards !important;
+  }
+}
+

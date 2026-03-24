@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState, useEffect, useCallback } from "react";
 import {
   Code2,
   Search,
@@ -25,6 +28,87 @@ import {
 } from "lucide-react";
 import PrimaryButton from "@/components/PrimaryButton";
 import HeroSection from "@/components/HeroSection";
+
+/* ── Emoji Orbit component (🚀 circles around text on enter + hover) ── */
+function EmojiOrbit({ emoji }: { emoji: string }) {
+  const [active, setActive] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  // Trigger once on scroll into view
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+          setTimeout(() => setActive(false), 900);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  const handleHover = useCallback(() => {
+    if (active) return;
+    setActive(true);
+    setTimeout(() => setActive(false), 900);
+  }, [active]);
+
+  return (
+    <span
+      ref={ref}
+      className={active ? "emoji-orbit-active" : ""}
+      onMouseEnter={handleHover}
+      style={{ display: "inline-block", cursor: "default" }}
+    >
+      {emoji}
+    </span>
+  );
+}
+
+/* ── Emoji Shake component (💼🎓🛠️ shakes on enter + hover) ── */
+function EmojiShake({ emoji }: { emoji: string }) {
+  const [active, setActive] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+          setTimeout(() => setActive(false), 800);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  const handleHover = useCallback(() => {
+    if (active) return;
+    setActive(true);
+    setTimeout(() => setActive(false), 800);
+  }, [active]);
+
+  return (
+    <span
+      ref={ref}
+      className={active ? "emoji-shake-active" : ""}
+      onMouseEnter={handleHover}
+      style={{ display: "inline-block", cursor: "default" }}
+    >
+      {emoji}
+    </span>
+  );
+}
 
 const uxSkills = [
   { icon: Search, label: "User Research" },
@@ -177,7 +261,7 @@ export default function Home() {
       {/* ───── Section 2: Real-World Projects ───── */}
       <section className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="mb-20 text-center font-kalam font-bold text-4xl text-primary md:text-6xl">
-          Real-World Projects 🚀
+          Real-World Projects <EmojiOrbit emoji="🚀" />
         </h2>
 
         <div className="flex flex-col gap-28">
@@ -216,9 +300,19 @@ export default function Home() {
               accurately match shades from images to achieve professional paint
               results.
             </p>
-            <PrimaryButton href="/projects/kaleido-colorlab">
-              Read More
-            </PrimaryButton>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a
+                href="https://gaahleri-color.cleme.store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg border border-primary/60 bg-transparent px-6 py-3 text-primary font-semibold transition-all hover:bg-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+              >
+                Explore Kaleido ColorLab ↗
+              </a>
+              <PrimaryButton href="/projects/kaleido-colorlab">
+                Read More
+              </PrimaryButton>
+            </div>
           </div>
 
           {/* Project 2 */}
@@ -253,9 +347,19 @@ export default function Home() {
               Gaahleri is a premium brand specializing in high-performance
               airbrushes and professional painting accessories.
             </p>
-            <PrimaryButton href="/projects/aventus-airbrush">
-              Read More
-            </PrimaryButton>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a
+                href="https://www.gaahleri.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg border border-primary/60 bg-transparent px-6 py-3 text-primary font-semibold transition-all hover:bg-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+              >
+                Explore Gaahleri Shop ↗
+              </a>
+              <PrimaryButton href="/projects/aventus-airbrush">
+                Read More
+              </PrimaryButton>
+            </div>
           </div>
         </div>
       </section>
@@ -264,7 +368,7 @@ export default function Home() {
       <section className="w-full py-24 bg-background-alt">
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="mb-16 text-center font-kalam font-bold text-4xl text-primary md:text-6xl">
-            Work Experience 💼
+            Work Experience <EmojiShake emoji="💼" />
           </h2>
 
           {/* ------------- MOBILE / TABLET (VERTICAL TIMELINE) ------------- */}
@@ -480,7 +584,7 @@ export default function Home() {
       <section className="w-full py-24 bg-background">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="mb-16 text-center font-kalam font-bold text-4xl text-primary md:text-6xl">
-            Education Background 🎓
+            Education Background <EmojiShake emoji="🎓" />
           </h2>
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-3/5">
@@ -527,7 +631,7 @@ export default function Home() {
       <section className="w-full py-24 bg-background-alt">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-16 font-kalam font-bold text-4xl text-primary md:text-6xl text-center">
-            My Skills 🛠️
+            My Skills <EmojiShake emoji="🛠️" />
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -653,7 +757,7 @@ export default function Home() {
       <section className="w-full py-24 bg-background">
         <div className="mx-auto max-w-350 px-6">
           <h2 className="mb-16 text-center font-kalam font-bold text-4xl text-primary md:text-6xl">
-            My Journey to UX Designer & Front-End Developer 🌱
+            My Journey to UX Designer & Front-End Developer <EmojiShake emoji="🌱" />
           </h2>
 
           <div className="flex flex-col gap-16">
@@ -689,7 +793,7 @@ export default function Home() {
       <section className="w-full py-24 bg-background-alt">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-16 text-center font-kalam font-bold text-4xl text-primary md:text-6xl">
-            Learn More About Me ✨
+            Learn More About Me <EmojiShake emoji="✨" />
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

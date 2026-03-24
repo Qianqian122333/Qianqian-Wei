@@ -97,7 +97,7 @@ export default function HeroSection() {
         {/* Right: Content */}
         <div className="w-full md:w-[55%] flex flex-col items-center md:items-start gap-10">
           {/* Hero Text — tilted 4deg, word-by-word reveal */}
-          <div className="font-kalam text-[2.25rem] sm:text-[2.75rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-tight rotate-[4deg] origin-center md:origin-left">
+          <div className="font-kalam text-[2.25rem] sm:text-[2.75rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-tight rotate-[4deg] origin-center md:origin-left hero-text-wave">
             {heroTextLines.map((line, lineIdx) => (
               <div key={lineIdx}>
                 {line.map((word, wIdx) => {
@@ -181,10 +181,10 @@ export default function HeroSection() {
             {techStack.map((tech, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center gap-1 md:gap-1.5 group"
+                className="flex flex-col items-center gap-1 md:gap-1.5 group tech-icon-hover"
               >
                 <div
-                  className={iconsAnimating ? "hero-icon-float" : ""}
+                  className={iconsAnimating ? "hero-icon-float tech-icon-inner" : "tech-icon-inner"}
                   style={
                     iconsAnimating
                       ? {
@@ -206,7 +206,7 @@ export default function HeroSection() {
                   </div>
                 </div>
                 <span
-                  className={`text-[9px] sm:text-[9px] md:text-[10px] text-foreground/50 whitespace-nowrap transition-all duration-300 ${
+                  className={`tech-label text-[9px] sm:text-[9px] md:text-[10px] text-foreground/50 whitespace-nowrap transition-all duration-300 ${
                     iconsAnimating ? "hero-label-float" : ""
                   }`}
                   style={
