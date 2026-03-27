@@ -27,7 +27,7 @@ import {
   PenTool,
 } from "lucide-react";
 import PrimaryButton from "@/components/PrimaryButton";
-import HeroSection from "@/components/HeroSection";
+import HeroCarousel from "@/components/HeroCarousel";
 
 /* ── Emoji Orbit component (🚀 circles around text on enter + hover) ── */
 function EmojiOrbit({ emoji }: { emoji: string }) {
@@ -46,7 +46,7 @@ function EmojiOrbit({ emoji }: { emoji: string }) {
           obs.disconnect();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -86,7 +86,7 @@ function EmojiShake({ emoji }: { emoji: string }) {
           obs.disconnect();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -256,20 +256,20 @@ export default function Home() {
   return (
     <main className="w-full pb-24 bg-background">
       {/* ───── Section 1: Hero ───── */}
-      <HeroSection />
+      <HeroCarousel />
 
       {/* ───── Section 2: Real-World Projects ───── */}
-      <section className="mx-auto max-w-5xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-6 py-24">
         <h2 className="mb-20 text-center font-kalam font-bold text-4xl text-primary md:text-6xl">
           Real-World Projects <EmojiOrbit emoji="🚀" />
         </h2>
 
-        <div className="flex flex-col gap-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Project 1 */}
-          <div className="flex flex-col items-center gap-6 text-center">
+          <div className="flex flex-col items-center gap-5 text-center">
             <Link
               href="/projects/kaleido-colorlab"
-              className="w-full max-w-4xl mb-8 overflow-hidden rounded-xl"
+              className="w-full mb-4 overflow-hidden rounded-xl"
             >
               <Image
                 src="/about-project1.webp"
@@ -293,7 +293,7 @@ export default function Home() {
                 Full-Stack Developer
               </span>
             </div>
-            <p className="max-w-2xl text-foreground leading-relaxed mb-4">
+            <p className="text-foreground leading-relaxed mb-4 text-sm">
               Kaleido ColorLab is an all-in-one digital workspace designed to
               bridge the gap between inspiration and reality. It allows creators
               to experiment with colors, generate precise mixing formulas, and
@@ -316,10 +316,10 @@ export default function Home() {
           </div>
 
           {/* Project 2 */}
-          <div className="flex flex-col items-center gap-6 text-center pt-8 border-t border-foreground/10">
+          <div className="flex flex-col items-center gap-5 text-center">
             <Link
               href="/projects/aventus-airbrush"
-              className="w-full max-w-4xl mb-8 overflow-hidden rounded-xl"
+              className="w-full mb-4 overflow-hidden rounded-xl"
             >
               <Image
                 src="/about-project2.webp"
@@ -343,7 +343,7 @@ export default function Home() {
                 Front-end Developer
               </span>
             </div>
-            <p className="max-w-2xl text-foreground leading-relaxed mb-4">
+            <p className="text-foreground leading-relaxed mb-4 text-sm">
               Gaahleri is a premium brand specializing in high-performance
               airbrushes and professional painting accessories.
             </p>
@@ -757,7 +757,8 @@ export default function Home() {
       <section className="w-full py-24 bg-background">
         <div className="mx-auto max-w-350 px-6">
           <h2 className="mb-16 text-center font-kalam font-bold text-4xl text-primary md:text-6xl">
-            My Journey to UX Designer & Front-End Developer <EmojiShake emoji="🌱" />
+            My Journey to UX Designer & Front-End Developer{" "}
+            <EmojiShake emoji="🌱" />
           </h2>
 
           <div className="flex flex-col gap-16">

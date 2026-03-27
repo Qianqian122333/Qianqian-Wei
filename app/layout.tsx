@@ -32,6 +32,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${kalam.variable} antialiased`}>
+        {/* Global paper grid overlay */}
+        <div
+          className="fixed inset-0 pointer-events-none z-[9999]"
+          style={{
+            backgroundImage: 'linear-gradient(rgba(255,248,225,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,248,225,0.07) 1px, transparent 1px)',
+            backgroundSize: '20px 20px'
+          }}
+          aria-hidden="true"
+        />
         <SplashProvider>
           <SplashOverlay />
           <NavWithSplash />

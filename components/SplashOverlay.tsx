@@ -43,16 +43,16 @@ export default function SplashOverlay() {
         onMouseEnter={triggerTilt}
       >
         <Image
-          src="/home-hero.webp"
+          src="/notebook.webp"
           alt="Qianqian's Notebook"
-          width={400}
-          height={400}
+          width={800}
+          height={800}
           priority
-          className={`w-[280px] sm:w-[320px] md:w-[360px] h-auto object-contain transition-transform ease-out select-none ${
+          className={`w-[450px] sm:w-[600px] md:w-[800px] h-auto object-contain transition-transform ease-out select-none ${
             phase === "flipping"
               ? "splash-book-flip"
               : tilted
-                ? "duration-500 rotate-[6deg] scale-[1.02]"
+                ? "duration-500 rotate-[3deg] scale-[1.02]"
                 : "duration-500 rotate-0 scale-100"
           }`}
         />
