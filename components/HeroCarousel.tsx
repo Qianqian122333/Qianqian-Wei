@@ -296,7 +296,15 @@ export default function HeroCarousel() {
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Carousel container */}
-        <div className="relative w-full overflow-hidden rounded-2xl bg-[#1a1a1a] shadow-xl border-2 border-foreground/80 min-h-[560px] md:min-h-[640px]">
+        <div
+          className="relative w-full overflow-hidden rounded-2xl bg-[#1a1a1a] shadow-xl border-2 border-foreground/80 min-h-[560px] md:min-h-[640px]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,248,225,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,248,225,0.06) 1px, transparent 1px)",
+            backgroundSize: "20px 20px",
+            backgroundColor: "#1a1a1a",
+          }}
+        >
           {/* Left Spine (Black Rectangle) */}
           <div className="absolute left-0 top-0 bottom-0 w-10 md:w-14 bg-[#0a0a0a] border-r-2 border-foreground/20 z-10 shadow-[inset_-5px_0_15px_rgba(0,0,0,0.5)]" />
 

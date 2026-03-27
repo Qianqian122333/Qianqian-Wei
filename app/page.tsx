@@ -295,10 +295,7 @@ export default function Home() {
             </div>
             <p className="text-foreground leading-relaxed mb-4 text-sm">
               Kaleido ColorLab is an all-in-one digital workspace designed to
-              bridge the gap between inspiration and reality. It allows creators
-              to experiment with colors, generate precise mixing formulas, and
-              accurately match shades from images to achieve professional paint
-              results.
+              bridge the gap between inspiration and reality.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <a
