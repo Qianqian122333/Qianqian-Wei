@@ -14,7 +14,7 @@ function TypewriterText({ trigger }: { trigger: boolean }) {
     { t: "am", c: "text-foreground" },
     { t: "Qianqian.", c: "text-foreground" },
   ];
-  
+
   const line2 = [
     { t: "The", c: "text-foreground" },
     { t: "UX", c: "text-[#DB7937]" },
@@ -34,13 +34,11 @@ function TypewriterText({ trigger }: { trigger: boolean }) {
           <span
             key={"L1" + i}
             className={`inline-block font-kalam text-3xl sm:text-4xl lg:text-5xl font-bold leading-relaxed transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:transition-none group-hover:animate-wave-float ${w.c} ${
-              trigger
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
+              trigger ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
-            style={{ 
+            style={{
               transitionDelay: `${i * 280}ms`,
-              animationDelay: `${i * 100}ms`
+              animationDelay: `${i * 100}ms`,
             }}
           >
             {w.t}
@@ -53,13 +51,11 @@ function TypewriterText({ trigger }: { trigger: boolean }) {
           <span
             key={"L2" + i}
             className={`inline-block font-kalam text-2xl sm:text-3xl lg:text-4xl font-bold leading-relaxed transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:transition-none group-hover:animate-wave-float ${w.c} ${
-              trigger
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
+              trigger ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
-            style={{ 
+            style={{
               transitionDelay: `${(line1.length + i) * 280}ms`,
-              animationDelay: `${(line1.length + i) * 100}ms` 
+              animationDelay: `${(line1.length + i) * 100}ms`,
             }}
           >
             {w.t}
@@ -71,10 +67,20 @@ function TypewriterText({ trigger }: { trigger: boolean }) {
 }
 
 /* ── Chapter badge (centered label with subtitle) ── */
-function ChapterBadge({ text, subtitle, colorClass = "text-[#DB7937]" }: { text: string, subtitle?: string, colorClass?: string }) {
+function ChapterBadge({
+  text,
+  subtitle,
+  colorClass = "text-[#DB7937]",
+}: {
+  text: string;
+  subtitle?: string;
+  colorClass?: string;
+}) {
   return (
     <div className="flex flex-col items-center mb-2 md:mb-6 w-full gap-1">
-      <span className={`${colorClass} font-kalam text-2xl sm:text-3xl md:text-4xl font-bold`}>
+      <span
+        className={`${colorClass} font-kalam text-2xl sm:text-3xl md:text-4xl font-bold`}
+      >
         {text}
       </span>
       {subtitle && (
@@ -120,10 +126,18 @@ function Slide2() {
     <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full h-full p-6 pl-14 sm:p-8 sm:pl-16 md:p-12 md:pl-20 min-h-[560px] md:min-h-[640px]">
       {/* Left: text content */}
       <div className="w-full md:w-[55%] flex flex-col justify-center items-center text-center gap-6 md:gap-8 order-2 md:order-1 min-h-[300px]">
-        <ChapterBadge text="Chapter 2" subtitle="Kaleido ColorLab" colorClass="text-[#B3EF5E]" />
+        <ChapterBadge
+          text="Chapter 2"
+          subtitle="Kaleido ColorLab"
+          colorClass="text-[#B3EF5E]"
+        />
         <p className="text-foreground text-2xl sm:text-3xl md:text-4xl leading-relaxed font-kalam max-w-sm md:max-w-lg font-bold">
-          <span className="block mb-3 text-foreground">Solved the real user pain.</span>
-          <span className="block text-[#B3EF5E]">Turned a no-belief project into the company&apos;s top initiative.</span>
+          <span className="block mb-3 text-foreground">
+            Solved the real user pain.
+          </span>
+          <span className="block text-[#B3EF5E]">
+            Turned a no-belief project into the company&apos;s top initiative.
+          </span>
         </p>
         <div className="flex justify-center w-full mt-2">
           <a
@@ -163,7 +177,11 @@ function Slide3() {
       </div>
       {/* Right: chapter badge + contact info */}
       <div className="w-full md:w-[55%] flex flex-col justify-center items-center text-center gap-6 md:gap-8 min-h-[300px]">
-        <ChapterBadge text="Chapter 3" subtitle="Contact Me" colorClass="text-[#5B7BC0]" />
+        <ChapterBadge
+          text="Chapter 3"
+          subtitle="Contact Me"
+          colorClass="text-[#5B7BC0]"
+        />
 
         <div className="flex flex-col gap-6 w-full max-w-md mx-auto font-kalam">
           {/* Email */}
@@ -272,7 +290,7 @@ export default function HeroCarousel() {
 
   return (
     <section className="w-full min-h-[80vh] flex flex-col justify-center py-8 md:py-16 items-center relative">
-      <div 
+      <div
         className="mx-auto max-w-7xl w-full px-4 sm:px-8 relative z-10"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -281,7 +299,7 @@ export default function HeroCarousel() {
         <div className="relative w-full overflow-hidden rounded-2xl bg-[#1a1a1a] shadow-xl border-2 border-foreground/80 min-h-[560px] md:min-h-[640px]">
           {/* Left Spine (Black Rectangle) */}
           <div className="absolute left-0 top-0 bottom-0 w-10 md:w-14 bg-[#0a0a0a] border-r-2 border-foreground/20 z-10 shadow-[inset_-5px_0_15px_rgba(0,0,0,0.5)]" />
-          
+
           {/* Page numbers */}
           <div className="absolute right-4 bottom-4 z-40 font-kalam text-foreground/50 text-xl md:text-2xl font-bold select-none">
             {current + 1}
@@ -312,9 +330,7 @@ export default function HeroCarousel() {
             )
           ) : (
             // STATIC: Just show current
-            <div className="relative z-20">
-              {slides[current]}
-            </div>
+            <div className="relative z-20">{slides[current]}</div>
           )}
 
           {/* Arrow controls */}

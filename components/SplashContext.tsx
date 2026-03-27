@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useEffect,
+} from "react";
 
 type SplashContextType = {
   entered: boolean;
@@ -36,7 +42,7 @@ export function SplashProvider({ children }: { children: React.ReactNode }) {
     sessionStorage.setItem("splashEntered", "true");
   }, []);
 
-  // Avoid hydation mismatch by not changing state logic structurally 
+  // Avoid hydation mismatch by not changing state logic structurally
   // before mounting
   if (!isReady) {
     return (

@@ -36,8 +36,9 @@ export default function RootLayout({
         <div
           className="fixed inset-0 pointer-events-none z-[9999]"
           style={{
-            backgroundImage: 'linear-gradient(rgba(255,248,225,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,248,225,0.07) 1px, transparent 1px)',
-            backgroundSize: '20px 20px'
+            backgroundImage:
+              "linear-gradient(rgba(255,248,225,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,248,225,0.07) 1px, transparent 1px)",
+            backgroundSize: "20px 20px",
           }}
           aria-hidden="true"
         />
